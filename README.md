@@ -3,7 +3,7 @@
 
 ## Installation
 
-There are three ways to get `ibm-watson-iot`:
+There are three ways to get `ibmWatsonIoT`:
 
 
 ## Usage
@@ -11,7 +11,7 @@ There are three ways to get `ibm-watson-iot`:
 Simply:
 
 ```bash
-ibm-watson-iot
+ibmWatsonIoT
 ```
 
 

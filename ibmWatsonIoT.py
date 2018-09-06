@@ -17,7 +17,7 @@ def quit(s, code=0):
 
 def print_help():
     help = """
-Usage: ibm-watson-iot <test string>
+Usage: ibmWatsonIoT <test string>
 """[1:-1]
     print(help)
 
