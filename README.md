@@ -11,7 +11,7 @@ There are three ways to get `ibmWatsonIoT`:
 Simply:
 
 ```bash
-ibmWatsonIoT
+ibm-watson-iot
 ```
 
 

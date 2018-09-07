@@ -3,7 +3,7 @@
 
 from setuptools import setup
 
-package_name = 'ibmWatsonIoT'
+package_name = 'ibm-watson-iot'
 filename = package_name + '.py'
 
 def get_version():
@@ -31,7 +31,7 @@ setup(
     py_modules=[package_name],
     entry_points={
         'console_scripts': [
-            'ibmWatsonIoT = ibmWatsonIoT:main'
+            'ibm-watson-iot = ibm-watson-iot:main'
             ]
         },
     license='License :: OSI Approved :: MIT License',
