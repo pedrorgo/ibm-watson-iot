@@ -31,7 +31,7 @@ setup(
     py_modules=[package_name],
     entry_points={
         'console_scripts': [
-            'ibm-watson-iot = ibm-watson-iot:main'
+            'ibm-watson-iot=ibm-watson-iot:main'
             ]
         },
     license='License :: OSI Approved :: MIT License',
