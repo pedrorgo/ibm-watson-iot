@@ -11,6 +11,7 @@ import os
 import sys
 import argparse
 import ConfigParser
+import ibmiotf.device
 
 __version__ = '0.1.1'
 
@@ -34,9 +35,19 @@ def createConfigFile():
     Config = ConfigParser.ConfigParser()
     cfgfile = open(getSnapPath() + "/.watson.iot.ini",'w')
 
-    Config.add_section('Connection')
-    Config.set('Connection','host',"https://server")
-    Config.set ('Connection','port', 1575)
+    #Config.add_section('Connection')
+    #Config.set('Connection','host',"https://server")
+    #Config.set ('Connection','port', 1575)
+    Config.add_section('device')
+    Config.set('device','org','org1id')
+    Config.set('device','type','rpi-3')
+    Config.set('device','id','00ef08ac05')
+    Config.set('device','auth-method','token')
+    Config.set('device','auth-token','00ef08ac05')
+    Config.set('device','clean-session','true')
+    Config.set('device','domain','internetofthings.ibmcloud.com')
+    Config.set('device','port',8883)
+
     Config.write(cfgfile)
     cfgfile.close()
     print "Configuration file created"
@@ -50,6 +61,19 @@ def main():
         quit(None,0)
 
     print("Python IBM Watson IoT ")
+
+    try:
+        options = ibmiotf.device.ParseConfigFile(getSnapPath() + "/.watson.iot.ini")
+        client = ibmiotf.device.Client(options)
+    except ibmiotf.ConnectionException  as e:
+            pass
+
+    #client.connect()
+    #qos=0
+    #myData={'name' : 'foo', 'cpu' : 60, 'mem' : 50}
+    #client.publishEvent("status", "json", myData, qos)
+
+
 
 if __name__ == '__main__':
     main()
