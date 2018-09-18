@@ -18,7 +18,8 @@ import sys
 # Needed for parsing arguments
 import argparse
 import ConfigParser
-#Library for ibm watson iot
+# Library for ibm watson iot
+# https://github.com/ibm-watson-iot
 import ibmiotf.device
 
 __version__ = '0.1.1'
