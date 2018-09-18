@@ -3,14 +3,22 @@
 # References:
 # https://opensource.org/licenses
 
-#https://askubuntu.com/questions/762354/where-can-ubuntu-snaps-write-data
-#https://docs.python.org/2/howto/argparse.html
-#https://wiki.python.org/moin/ConfigParserExamples
+# Please, cheack this docs if you want more info about this projects 
+# ------------------------------------------------------------------
+
+# snap locations: 
+# https://askubuntu.com/questions/762354/where-can-ubuntu-snaps-write-data
+
+# Parsing Arguments in python
+# https://docs.python.org/2/howto/argparse.html
+# https://wiki.python.org/moin/ConfigParserExamples
 
 import os
 import sys
+# Needed for parsing arguments
 import argparse
 import ConfigParser
+#Library for ibm watson iot
 import ibmiotf.device
 
 __version__ = '0.1.1'
